@@ -1,0 +1,38 @@
+﻿@model IEnumerable<AnotacoesAPI.Models.Nota>
+
+@{ ViewBag.Title = "Todas as Anotações";}
+
+<h2>@ViewBag.Title</h2>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Titulo</th>
+        <th>Anotação</th>
+        <th>Deletar</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <a href="Notas/Edit/@item.Id">
+                    @item.Id
+                </a>
+            </td>
+            <td>
+                <a href="Notas/Edit/@item.Id">
+                    @item.Titulo
+                </a>
+            </td>
+            <td>
+                <a href="Notas/Edit/@item.Id">
+                    @item.Conteudo
+                </a>
+            </td>
+            <td>
+                <a href="Notas/Delete/@item.Id">deletar</a>
+            </td>
+        </tr>
+    }
+</table>
