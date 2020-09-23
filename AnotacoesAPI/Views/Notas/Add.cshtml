@@ -1,0 +1,37 @@
+﻿@model AnotacoesAPI.Models.Nota
+
+@{ ViewBag.Title = "Adicionar Anotação";}
+
+<h2>@ViewBag.Title</h2>
+
+<form asp-controller="Notas" asp-action="Add" method="post" class="form-horizontal" role="form">
+    <div class="form-horizontal">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Titulo" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Conteudo" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Conteudo" class="form-control" />
+                <span asp-validation-for="Conteudo" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Acessos" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Acessos" class="form-control" />
+                <span asp-validation-for="Acessos" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Incluir" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>

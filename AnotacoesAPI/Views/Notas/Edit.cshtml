@@ -1,0 +1,43 @@
+﻿@model AnotacoesAPI.Models.Nota
+
+@{ ViewBag.Title = "Editar Anotação";}
+
+<h2>@ViewBag.Title</h2>
+
+<form asp-controller="Notas" asp-action="Edit" method="post" class="form-horizontal" role="form">
+    <div class="form-horizontal">
+        <div asp-validation-summary="All" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Id" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Id" class="form-control" readonly="readonly" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Titulo" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Titulo" class="form-control" />
+                <span asp-validation-for="Titulo" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Conteudo" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Conteudo" class="form-control" />
+                <span asp-validation-for="Conteudo" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Acessos" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Acessos" class="form-control" />
+                <span asp-validation-for="Acessos" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Atualizar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
